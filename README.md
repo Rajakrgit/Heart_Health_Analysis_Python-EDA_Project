@@ -30,6 +30,10 @@ Stakeholders: management, healthcare providers, data analysts, patients, cardiol
 
 • Matplotlib / Seaborn: charts and statistical visualisations.
 
+• SciPy: Welch's t-test.
+
+• Scikit-learn: train/test split, scaling, logistic regression and evaluation.
+
 # 4. Key findings from the notebook
 • Average age: 54.43 years
 
