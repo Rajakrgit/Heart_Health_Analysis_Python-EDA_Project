@@ -1,18 +1,72 @@
 # Heart_Health_Analysis_Python-EDA_Project
-This project was called Pulse of Prevention: Heart Health Analysis. The main objective was to analyze patient health data to understand patterns associated with the presence of heart disease and evaluate a machine learning model for predicting the recorded outcome.
+# 1. Project Overview
 
-I worked with a dataset containing clinical and demographic information, including age, sex, chest-pain category, resting blood pressure, cholesterol, maximum heart rate, exercise-induced angina, and other clinical measurements.
+Pulse of Prevention: Analyzing Heart Health for Better Outcomes is a Python-based data analysis project created for the fictional healthcare company HealthPulse Analytics.
 
-I used Python as the primary programming language, Pandas and NumPy for data processing, Matplotlib and Seaborn for visualization, SciPy for statistical testing, and Scikit-learn for machine learning.
+The project explores patient demographics, clinical measurements and medical indicators to understand patterns associated with the presence of heart disease. It uses descriptive statistics, visualisations, correlation analysis and a logistic regression model to examine how patient characteristics relate to the dataset's heart-disease target variable.
 
-During the project, I performed data-quality checks, descriptive analysis, correlation analysis, group comparisons, and logistic regression.
+The purpose is to communicate data-driven observations that may support further clinical investigation and preventive-health planning. This is an educational analysis, not a clinical diagnostic tool.
 
-One of the main challenges was identifying duplicate records. The dataset contained 723 exact duplicate rows, which could affect the accuracy of the analysis and model evaluation. I learned the importance of removing duplicates and validating data before drawing conclusions.
 
-I also found that several clinical variables had measurable associations with the recorded target. However, I learned that correlation does not prove causation and that a predictive model must be evaluated carefully.
+# 2. Business requirements
+• Summarise age, sex and clinical measurements.
 
-My initial logistic regression model achieved approximately 81% accuracy, but after removing duplicate records, I obtained approximately 80% accuracy on a new test split.
+• Explore relationships between features and heart-disease target.
 
-To improve the project, I would use cross-validation, improve categorical feature encoding, validate the model on independent data, and develop a Power BI dashboard to communicate the findings.
+• Compare records where target = 0 and target = 1.
 
-Overall, this project strengthened my Python, data-cleaning, statistical-analysis, visualization, and machine-learning skills.
+• Identify exploratory patient profiles and build a baseline logistic regression model.
+
+• Communicate insights and areas for further research.
+
+Stakeholders: management, healthcare providers, data analysts, patients, cardiology research institute and healthcare policymakers.
+
+# 3. Tools and technologies
+• Python: main analysis language.
+
+• Jupyter Notebook: execute and document the workflow.
+
+• Pandas / NumPy: data inspection, cleaning and numerical operations.
+
+• Matplotlib / Seaborn: charts and statistical visualisations.
+
+# 4. Key findings from the notebook
+• Average age: 54.43 years
+
+• Male-coded records:	713 (69.56%)
+
+• Female-coded records:	312 (30.44%)
+
+• Average resting blood pressure:	131.61 mm Hg
+
+• Average cholesterol: 246.00 mg/dl
+
+• Records with fbs = 1:	153
+
+• Records with exang = 1:	33.66%
+
+• Maximum thalach: 202
+
+# 5. Logistic regression results
+• Accuracy:	0.810
+
+• ROC-AUC: 0.930
+
+• Recall for target = 1: 0.91
+
+• Precision for target = 1:	0.76
+
+• F1-score for target = 1: 0.83
+
+# 6. Challenges and recommendations
+• Duplicates: 723 exact duplicate rows were detected, but the current notebook does not remove them before analysis. Verify and handle duplicates, then rerun the     analysis.
+
+• Coded categories: Treat fields such as cp, restecg, slope and thal as categorical where appropriate.
+
+• Model validation: Use cross-validation, calibration and threshold review; check for duplicate-driven overlap between train and test data.
+
+• Clinical context: Validate interpretations with qualified healthcare professionals.
+
+• Report precision, recall, F1-score, ROC-AUC and confusion matrix—not accuracy alone.
+
+• Present findings as exploratory patterns, not medical advice or a diagnosis.
